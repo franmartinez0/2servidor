@@ -4,41 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ejercicio13</title>
+    <title>ejercicio11</title>
 </head>
 <body>
-    <?php
+<?php
 
-    $numero=[];
-    for ($i=0;$i<7;$i++ ){
-        for($j=0;$j<7;$j++ ){
-            $numero[$i][$i];
-            if($I==$j){
-                $numero[$i][$j] = 1;
-            }else{
-                $numero[$i][$j] = rand(1,9);
-            }
+$numeros = [];
+for($i=0; $i<7; $i++) {
+    for($j=0; $j<7; $j++) {
+        if ($i == $j) {
+            $numeros[$i][$j] = 1;
+        } else {
+            $numeros[$i][$j] = rand(1,9);
         }
     }
-    //calcular suma de las filas
-    $sumafila =[];
+}
 
-    for ($i=0;$i<7;$i++){
-        $sumafila[$i]=array_sum($numeros[$i]);
+//Calcular suma de las filas
+$sumaFila = [];
+for($i=0; $i<7; $i++) {
+    /*
+    $sumaF = 0;
+    for($j=0; $j<7; $j++) {
+        $sumaF += $numeros[$i][$j];
     }
-    var_dump($sumafila);
-    echo"<br/>";
+    $sumaFila[$i] = $sumaF;
+    */
+    $sumaFila[$i] = array_sum($numeros[$i]);
+}
+var_dump($sumaFila);
+echo "<br>";
 
-    //calcular suma de las columnas 
-    $sumaColum=[];
-    for ($i=0;$i<7;$i++){
-        $sumaColum[$j]=array_sum(array_column($numero,$j));
+//Calcular suma de las columnas
+$sumaColumna = [];
+for($j=0; $j<7; $j++) {
+    $sumaColumna[$j] = array_sum(array_column($numeros, $j));
+}
+var_dump($sumaColumna);
+echo "<br>";
 
+
+
+for($i=0; $i<7; $i++) {
+    for($j=0; $j<7; $j++) {
+        echo $numeros[$i][$j] . " ";
     }
-    var_dump($sumaColum);
-    echo"<br/>";
+    echo "<br>";
+}
 
 ?>
-    
 </body>
 </html>
