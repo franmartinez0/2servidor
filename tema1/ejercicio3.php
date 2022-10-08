@@ -1,3 +1,8 @@
+
+<?php
+    include_once($_SERVER["DOCUMENT_ROOT"] . "/cabecera.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
