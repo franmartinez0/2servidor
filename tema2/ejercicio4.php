@@ -36,21 +36,29 @@ $letra=str_split($mensaje,1);
 
 foreach($letra as $clave){
 $nums=ord($clave);
-$nums=chr($nums+$clave);
+$nuevo=chr($nums+$clave);
 
-echo $letra;
+echo $nuevo;
 }
 echo "<br>";
 
 }
 
-encriptar("hola",3);
 
+function desencriptar($mensaje, $clave){ 
+    $letra=str_split($mensaje,1);
 
-function desencriptar($mensaje, $clave){    
+foreach($letra as $clave){
+$nums=ord($clave);
+$des=chr($nums-$clave);
+
+echo $des;   
 }
+echo "<br>";
 
 
+}
+encriptar("hola",3);
 
 
 ?>
