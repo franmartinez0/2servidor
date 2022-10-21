@@ -13,7 +13,7 @@
 
   <body style="background-color:grey">
 
-  <title>Document</title>
+  <title>Home</title>
 </head>
 
 <body >
