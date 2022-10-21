@@ -8,32 +8,34 @@
 </head>
 <body>
     <?php
-    $empresas=array("cosentino","garciden","deretil","makito","globomatik");
+    $empresas=array('cosentino','garciden','deretil','makito','globomatik');
 
 
 
     function letras($nombre,$opcion){
 
         switch($opcion){
-            case "1":
+            case '1':
                 return strtolower($nombre);
-                break;
-            case "2":
+                
+            case '2':
                 return strtoupper($nombre);
-                break;
-            case "3":   
+                
+            case '3':   
                 return ucfirst($nombre);
-
+                default;
         }
     }
 
 
-    echo letras($nombre[1],1);
+    echo letras($empresas[1],'1');
     echo "<br>";
-    echo letras($nombre[2],2);
+    echo letras($empresas[2],'2');
     echo "<br>";
-    echo letras($nombre[3],3);
+    echo letras($empresas[3],'3');
     echo "<br>";
+
+    
 
 
 ?>

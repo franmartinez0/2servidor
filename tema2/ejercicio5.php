@@ -7,10 +7,56 @@
     <title>Ejercicio5</title>
 </head>
 <body>
-    <script>
+    <?php
+ function encriptar($mensaje, $clave)
+    {
+        echo $mensaje;
+        echo "<br>";
+        $contrario = strrev($mensaje);
+        echo $contrario;
+        echo "<br>";
+        $letras = str_split($contrario, 1);
+
+
 
         
-    </script>
+            $letra = str_split($mensaje, 1);
+    
+            foreach ($letra as $valor) {
+                $num = ord($valor);
+                $nuevo = chr($num + $clave);
+    
+                echo $nuevo;
+            }
+            echo "<br>";
+        
+        
+    }
+
+    function desencriptar($mensaje, $clave)
+    {
+        echo $mensaje;
+        echo "<br>";
+        $contrario = strrev($mensaje);
+        echo $contrario;
+        echo "<br>";
+        $letras = str_split($contrario, 1);
+
+        $letra = str_split($mensaje, 1);
+
+        foreach ($letra as $valor) {
+            $num = ord($valor);
+            $des = chr($num - $clave);
+
+            echo $des;
+        }
+        echo "<br>";
+    }
+    echo encriptar("esto esta encriptado despues de escribirlo del reves", 1);
+    echo "<br>";
+    echo desencriptar("ftup!ftub!fodsjqubep!eftqvft!ef!ftdsjcjsmp!efm!sfwft", 1);
+        
+    ?>
     
 </body>
 </html>

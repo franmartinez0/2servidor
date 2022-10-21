@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ejercicio4</title>
 </head>
+
 <body>
     <?php
-/*
+    /*
     Vamos a construir un encriptador y desencriptador de mensajes. Crearemos dos
     funciones:
     - encriptar($mensaje,$clave)
@@ -31,36 +33,41 @@
     pasar un carácter a su correspondiente dígito ASCII y al revés
 */
 
-function encriptar($mensaje, $clave){
-$letra=str_split($mensaje,1);
+    function encriptar($mensaje, $clave)
+    {
+        $letra = str_split($mensaje, 1);
 
-foreach($letra as $clave){
-$nums=ord($clave);
-$nuevo=chr($nums+$clave);
+        foreach ($letra as $valor) {
+            $num = ord($valor);
+            $nuevo = chr($num + $clave);
 
-echo $nuevo;
-}
-echo "<br>";
-
-}
-
-
-function desencriptar($mensaje, $clave){ 
-    $letra=str_split($mensaje,1);
-
-foreach($letra as $clave){
-$nums=ord($clave);
-$des=chr($nums-$clave);
-
-echo $des;   
-}
-echo "<br>";
+            echo $nuevo;
+        }
+        echo "<br>";
+    }
 
 
-}
-encriptar("hola",3);
+    function desencriptar($mensaje, $clave)
+    {
+        $letra = str_split($mensaje, 1);
+
+        foreach ($letra as $valor) {
+            $num = ord($valor);
+            $des = chr($num - $clave);
+
+            echo $des;
+        }
+        echo "<br>";
+    }
 
 
-?>
+
+
+    echo encriptar("esto es un mensaje encriptado", 1);
+   echo desencriptar("ftup!ft!vo!nfotbkf!fodsjqubep", 1);
+
+
+    ?>
 </body>
+
 </html>

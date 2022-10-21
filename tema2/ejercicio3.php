@@ -17,13 +17,16 @@ una por una las palabras (se supone que están en la misma posición en los
 arrays)
 
 */
+
+function diccionario($palabra){
+    
 $lista_espa = array("hola","adios","padre","ordenador","cafe","movil","botella","profesor","uno","dos");
 $lista_eng= array ("hello","bye","father","computer","coffee","phone","bottle","teacher","one","two");
 
 $esta=false;
 
-for($i=0;$i<count($lista_esp);$i++){
-    if ($lista_es[$i]==$palabra){
+for($i=0;$i<count($lista_eng);$i++){
+    if ($lista_espa[$i]==$palabra){
         return $lista_eng[$i];
         $esta=true;
         
@@ -34,8 +37,9 @@ if ($esta==false){
 echo ("esa palabra no está prueba con otra (ej:hola)");
 
 }
+}
 
-$lista_espa("movil");
+echo diccionario("hola");
 
 
 ?>
