@@ -9,7 +9,7 @@ include("cabecera.php");
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">Correo electrónico</label>
     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+    <div id="emailHelp" class="form-text"></div>
   </div>
   <div class="mb-3">
     <label for="exampleInputPassword1" class="form-label">Contraseña</label>
