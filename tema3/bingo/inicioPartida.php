@@ -27,6 +27,6 @@
 
 
     
-<button type="submit"  name="login" class="btn btn-primary btn-user btn-block"  value="login">
+<button type="submit"  name="empezar" class="btn btn-primary btn-user btn-block"  value="empezar">
     iniciar partida
 </button>

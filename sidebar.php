@@ -59,6 +59,18 @@
 					<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
 						<li><a href="#" class="link-dark rounded">Ejercicio 1</a></li>
 					</ul>
+					<ul>
+					<li class="mb-1">
+					<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#tema3" aria-expanded="false">
+					TEMA 3
+					</button>
+					<div class="collapse" id="tema3">
+					<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+						<li><a href="#" class="link-dark rounded">Ejercicio 1</a></li>
+					</ul>
+					</div>
+				</li>
+					</ul>
 					</div>
 				</li>
 
