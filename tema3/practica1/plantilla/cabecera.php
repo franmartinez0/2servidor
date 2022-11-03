@@ -66,7 +66,8 @@
                         <a class="collapse-item" href="login.php">Login</a>
                         <a class="collapse-item" href="proyectos.php">Proyectos</a>
                         <a class="collapse-item" href="nuevoProyecto.php">Nuevo Proyecto</a>
-                        
+                        <a class="collapse-item" href="nuevoProyecto.php">Generar pdf</a>
+                        <a class="collapse-item" href="nuevoProyecto.php">enviar email</a>
                     </div>
                 </div>
             </li>
