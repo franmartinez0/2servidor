@@ -4,77 +4,126 @@ session_start();
 <?php
 include("cabecera.php");
 ?>
-
-<html>
-  <script src="https://d3js.org/d3.v4.min.js"></script>
-  <script src=
-"https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js"></script>
-  <link
-    rel="stylesheet"
-    href=
-"https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.css"
-  />
-  <link
-    rel=
-"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"
-    type="text/css"
-  />
-  
-  <script src=
-"https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js">
-  </script>
-  <script src=
-"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js">
-  </script>
-  
-  <script src=
-"https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.1/Chart.min.js">
-  </script>
-  
-  <style>
-    body {
-      text-align: center;
-      color: green;
-    }
-    h2 {
-      text-align: center;
-      font-family: "Verdana", sans-serif;
-      font-size: 40px;
-    }
-  </style>
-  <body>
-    <div class="col-xs-12 text-center">
-      <h2>Donut Chart</h2>
+<?php
+echo '
+<h1 class="h3 mb-0 text-gray-800">' . $_SESSION['ids']['nombre'] . '</h1>
+<br>
+<div class="row">
+<!-- Earnings (Monthly) Card Example -->
+<div class="col-xl-3 col-md-6 mb-4">
+    <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                        FECHA INICIO</div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">' . $_SESSION['ids']['fechaini']  .   '</div>
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                </div>
+            </div>
+        </div>
     </div>
-  
-    <div id="donut-chart"></div>
-  
-    <script>
+</div>
+<!-- Earnings (Monthly) Card Example -->
+<div class="col-xl-3 col-md-6 mb-4">
+    <div class="card border-left-primary shadow h-100 py-2">
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                    <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                       FECHA FIN PREVISTA</div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">' . $_SESSION['ids']['fechafin'] . '</div>
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-calendar fa-2x text-gray-300"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-      
-      var chart = bb.generate({
-        data: {
-          columns: [
-            ["Realizado",90],
-            ["por realizar", 10],
-            [],
-          ],
-          type: "donut",
-          onclick: function (d, i) {
-            console.log("onclick", d, i);
-          },
-          onover: function (d, i) {
-            console.log("onover", d, i);
-          },
-          onout: function (d, i) {
-            console.log("onout", d, i);
-          },
-        },
-        donut: {
-          title: "70",
-        },
-        bindto: "#donut-chart",
-      });
-    </script>
-  </body>
+</div>
+<div class="col-xl-3 col-md-6 mb-4">
+    <div class="card border-left-info shadow h-100 py-2">
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                    <div class="text-xs font-weight-bold text-info text-uppercase mb-1">PORCENTAJE COMPLETADO
+                    </div>
+                    <div class="row no-gutters align-items-center">
+                        <div class="col-auto">
+                            <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">' . $_SESSION['ids']['porcentaje'] . '%</div>
+                        </div>
+                        <div class="col">
+                            <div class="progress progress-sm mr-2">
+                                <div class="progress-bar bg-info" role="progressbar"
+                                    style="width: ' . $_SESSION['ids']['porcentaje'] . '%" aria-valuenow="50" aria-valuemin="0"
+                                    aria-valuemax="100"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Earnings (Monthly) Card Example -->
+<!-- Pending Requests Card Example -->
+<div class="col-xl-3 col-md-6 mb-4">
+    <div class="card border-left-warning shadow h-100 py-2">
+        <div class="card-body">
+            <div class="row no-gutters align-items-center">
+                <div class="col mr-2">
+                    <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                        IMPORTANCIA</div>
+                    <div class="h5 mb-0 font-weight-bold text-gray-800">' . $_SESSION['ids']['importancia']  . '</div>
+                </div>
+                <div class="col-auto">
+                    <i class="fas fa-comments fa-2x text-gray-300"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<div
+    class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+    <h6 class="m-0 font-weight-bold text-primary">ESTADÍSTICAS</h6>
+</div>
+<br>
+<!-- Donut Chart -->
+<div class="col-xl-4 col-lg-5">
+    <div class="card shadow mb-4">
+        <!-- Card Header - Dropdown -->
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">AVANCE DEL PROYECTO</h6>
+        </div>
+        <!-- Card Body -->
+        <div class="card-body">
+            <div class="chart-pie pt-4">
+                <canvas id="donut"></canvas>
+            </div>
+            <hr> <center>' . strtoupper($_SESSION['ids']['nombre']) . '</center></code>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+';
+
+
+
+
+
+
+?>
+
+
+
+
 </html>

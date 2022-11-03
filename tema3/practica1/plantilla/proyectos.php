@@ -76,10 +76,10 @@ foreach ($_SESSION['proyectos'] as $valor) {
 
     //añadimos el boton de borrar para poder eliminar por id
     echo"<td><a href='controlador.php?accion=borrarid&id=". $valor['id'] ."'
-    type='botton' name='borrarid' class='btn btn-danger'>Borrar
+    type='botton' name='borrarid' class='btn btn-info'>Borrar
     </a></td>";
     echo"<td><a href='controlador.php?accion=informacion&id=". $valor['id'] ."'
-    type='botton' name='informacion' class='btn btn-danger'>Info
+    type='botton' name='informacion' class='btn btn-light'>Info
     </button></td>";
     echo "</tr>";
 }
@@ -92,8 +92,8 @@ echo '</table>';
 
 //añadimos el boton de borrar todo 
 
-echo '<button type="submit" name="borrartodo" class="btn btn-outline-success">
-<a href="controlador.php?accion=borrartodo" id="botoncito" class="btn btn-danger">BORRAR TODO</a>
+echo '<button type="submit" name="borrartodo" class="btn btn-warning">
+<a href="controlador.php?accion=borrartodo" id="botoncito" class="btn btn-warning">BORRAR TODO</a>
 </button>';
 echo '</div>';
 echo '</div>';
