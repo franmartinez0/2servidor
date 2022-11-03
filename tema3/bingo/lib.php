@@ -18,11 +18,11 @@
     function pintarCarton($carton) {
 
         echo "<div class='row'>";
-        
         foreach($carton as $num) {
             echo "<div class='col'>";
             if (in_array($num, $_SESSION['salidos'])) {
                 echo "<span class='fs-6 text-danger'>".$num."</span>";
+              
             } else {
                 echo "<span class='fs-6'>".$num."</span>";
             }
@@ -70,7 +70,21 @@
     }
 
 
+    function mostrarAcertados($carton){
+        $acertados=array();
+        echo "acertados";
+        echo "<div class='row'>";
+        foreach($carton as $num) {
+
+            echo "<div class='col'>";
+            if (in_array($num, $_SESSION['salidos'])) {
+                array_push($acertados,$num);
+
+             
+            }
+            
+
+    }
+    }
 
     //FIN FUNCIONES -------------------------------------
-
-?>

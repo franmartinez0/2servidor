@@ -44,7 +44,7 @@
                 header("Location: index.php?accion=jugar");
             }
         }
-
+        
     }
 
 

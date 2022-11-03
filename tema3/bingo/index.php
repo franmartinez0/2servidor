@@ -48,6 +48,7 @@
                     echo "<h1>Nick: ".$_SESSION['jugador'.$i][0]."</h1>";
                     echo "<h3>Saldo: ".$_SESSION['jugador'.$i][1]."</h3>";
                     pintarCarton($_SESSION['carton'.$i]);
+                    mostrarAcertados($_SESSION['carton'.$i]);
                 }
 
                 //Botón sacar número del tambor

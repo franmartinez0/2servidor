@@ -57,7 +57,18 @@
 					</button>
 					<div class="collapse" id="tema3">
 					<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-						<li><a href="#" class="link-dark rounded">Ejercicio 1</a></li>
+					<ul>
+					<li class="mb-1">
+					<button class="btn btn-toggle align-items-center rounded collapsed" data-bs-toggle="collapse" data-bs-target="#tema3" aria-expanded="false">
+					Bingo
+					</button>
+					<div class="collapse" id="tema3">
+					<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+					<li><a href="/tema3/bingo/index.php" class="link-dark rounded">index</a></li>
+					<li><a href="/tema3/bingo/controlador.php" class="link-dark rounded">controlador</a></li>
+					<li><a href="/tema3/bingo/lib.php" class="link-dark rounded">lib</a></li>
+					
+					</ul>
 					</ul>
 					<ul>
 					<li class="mb-1">
