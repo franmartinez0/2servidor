@@ -50,10 +50,12 @@ include("cabecera.php");
     <div id="donut-chart"></div>
   
     <script>
+
+      
       var chart = bb.generate({
         data: {
           columns: [
-            ["Realizado", 90],
+            ["Realizado",90],
             ["por realizar", 10],
             [],
           ],

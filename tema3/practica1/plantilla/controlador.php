@@ -1,5 +1,6 @@
 <?php
 session_start();
+//session_destroy();
 ?>
 <?php
   header("Content-Type: text/html; charset=UTF-8");
@@ -90,7 +91,7 @@ if ($_GET['accion'] == "borrarid") {
 <?php
 //el boton colocado en la propia tabla te dirige hacia ver proyecto , donde tomará los datos del proyecto y pintara 
 //en un grafico circular
-if ($_GET['accion'] == "info") {
+if ($_GET['accion'] == "informacion") {
     foreach ($_SESSION['proyectos'] as $key => $value) {
         if ($_GET['id'] == $key) {
             $_SESSION['ids'] = $_SESSION['proyectos'][$key];
@@ -120,17 +121,56 @@ if ($_GET['accion'] == "cerrar") {
     echo '<script>window.location="' . "login.php" . '"</script>';
 }
 ?>
+
+
+
+
+
 <?php
+if ($_GET['accion'] == "borrarid") {
 
-if ($_GET['accion'] == "nuevoProyecto") {
 
-
-$proyectoNuevo = array();
-foreach ($_SESSION['proyectos'] as $proyecto) {
-    
-        array_push($proyectoNuevo, $proyecto);
+    $proyectoNuevo = array();
+    foreach ($_SESSION['proyectos'] as $pr) {
+        if ($pr['id'] != $_GET['id']) {
+            array_push($proyectoNuevo, $pr);
+        }
+    }
+    $_SESSION['proyectos'] = $proyectoNuevo;
+    echo '<script>window.location="' . "proyectos.php" . '"</script>';
 }
-$_SESSION['proyectos'] = $proyectoNuevo;
-echo '<script>window.location="' . "proyectos.php" . '"</script>';
+?>
+
+
+
+<?php
+if (isset($_POST['accion'])) {
+    if ($_POST["accion"] == "formulario") {
+        if ($_POST) {
+
+            if (isset($_POST['nuevoProyecto'])) {
+                $nombre = filtrado($_POST['nombre']);
+                $fechaInicio = filtrado($_POST['fechaInicio']);
+                $fechaFinPrevisto = filtrado($_POST['fechaFinPrevista']);
+                $diasTranscurridos = filtrado($_POST['diasTranscurridos']);
+                $porcentajeCompletado = filtrado($_POST['porcentajeCompletado']);
+                $importancia = filtrado($_POST['importancia']);
+
+                if (isset($_SESSION['proyectos'])) {
+                    $id = 0;
+                } else {
+                    //Calculamos el id mayor
+                    $ids = array_column($_SESSION['proyectos'], 'id');
+                    $id = max($ids) + 1;
+                }
+                array_push($_SESSION['proyectos'], [
+                    'id' => $id, 'nombre' => $nombre, 'diasTranscurridos' => $diasTranscurridos,
+                    'fechaInicio' => $fechaInicio, 'fechaFinPrevista' => $fechaFinPrevisto, 'porcentajeCompletado' => $porcentajeCompletado, 'importancia' => $importancia
+                ]);
+
+                echo '<script>window.location="' . "proyectos.php" . '"</script>';
+            }
+        }
+    }
 }
 ?>

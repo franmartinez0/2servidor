@@ -65,6 +65,7 @@
                         <h6 class="collapse-header">Archivos</h6>
                         <a class="collapse-item" href="login.php">Login</a>
                         <a class="collapse-item" href="proyectos.php">Proyectos</a>
+                        <a class="collapse-item" href="nuevoProyecto.php">Nuevo Proyecto</a>
                         
                     </div>
                 </div>

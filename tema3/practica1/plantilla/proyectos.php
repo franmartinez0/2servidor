@@ -1,5 +1,6 @@
 <?php
 session_start();
+//session_destroy();
 ?>
 <?php
 include("cabecera.php");
@@ -74,11 +75,11 @@ foreach ($_SESSION['proyectos'] as $valor) {
 
 
     //añadimos el boton de borrar para poder eliminar por id
-    echo "<td><a href='controlador.php?accion=borrarid&id=" . $valor['id'] . "'
-    type='botton' name='borrarporid' class='btn btn-default btn-lg active'>Borrar
+    echo"<td><a href='controlador.php?accion=borrarid&id=". $valor['id'] ."'
+    type='botton' name='borrarid' class='btn btn-danger'>Borrar
     </a></td>";
-    echo "<td><a href='controlador.php?accion=informacion&id=" . $valor['id'] . "'
-    type='botton' name='informacion' class='btn btn-primary btn-lg active'>Info
+    echo"<td><a href='controlador.php?accion=informacion&id=". $valor['id'] ."'
+    type='botton' name='informacion' class='btn btn-danger'>Info
     </button></td>";
     echo "</tr>";
 }
