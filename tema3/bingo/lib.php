@@ -15,14 +15,21 @@
 
     }
 
-    function pintarCarton($carton) {
-
+    function pintarCarton($carton,$i) {
+        $contador=0;
         echo "<div class='row'>";
         foreach($carton as $num) {
             echo "<div class='col'>";
             if (in_array($num, $_SESSION['salidos'])) {
                 echo "<span class='fs-6 text-danger'>".$num."</span>";
-              
+                
+                
+                
+                $contador++;
+               
+                if($contador==15){
+                    ganar($i);
+                }
             } else {
                 echo "<span class='fs-6'>".$num."</span>";
             }
@@ -70,7 +77,7 @@
     }
 
 
-    function mostrarAcertados($carton){
+    /*function mostrarAcertados($carton){
         $acertados=array();
         echo "acertados";
         echo "<div class='row'>";
@@ -85,6 +92,35 @@
             
 
     }
+    }*/
+
+
+    function ganar($i){
+
+        echo"<br/>";
+        echo"ha ganado un bote de ".bote()."monedas, haciendo un total de ". $_SESSION['jugador'.$i][1]+bote()." en total";
+        echo"
+        <div class='modal-dialog' role='document'>
+          <div class='modal-content rounded-3 shadow'>
+            <div class='modal-body p-4 text-center'>
+              <p class='mb-0'>You can always change your mind in your account settings.</p>
+            </div>
+            <div class='modal-footer flex-nowrap p-0'>
+              <button type='button' class='btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0 border-end'><strong>Yes, enable</strong></button>
+              <button type='button' class='btn btn-lg btn-link fs-6 text-decoration-none col-6 m-0 rounded-0' data-bs-dismiss='modal'>No thanks</button>
+            </div>
+          </div>
+        </div>
+      ";
     }
 
+
+
+    function bote(){
+        return $_SESSION['numJugadores']*5;
+    }
+
+
+
+    
     //FIN FUNCIONES -------------------------------------
