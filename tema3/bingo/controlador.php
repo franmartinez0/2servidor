@@ -17,7 +17,7 @@
             for($i=0; $i < $_SESSION['numJugadores']; $i++) {
                 $valor = 'carton'.$i;
                 $_SESSION[$valor] = generarCarton();
-                $_SESSION['jugador'.$i] = array($_POST['nick'.$i], $_POST['saldo'.$i]);                
+                $_SESSION['jugador'.$i] = array($_POST['nick'.$i], $_POST['saldo'.$i]-5);                
             }
 
             header("Location: index.php?accion=inicio");
