@@ -1,0 +1,216 @@
+<?php
+
+
+class prestamos{
+    private $idPrestamo;
+    private $isbn;
+    private $prestamos;
+    private $fecha_inicio;
+    private $fecha_fin;
+    private $estado;
+    private $prestamocol;
+    private $fk_libro;
+    private $fk_usuario;
+
+    
+    
+    
+    
+    public function __construct($isbn="",$prestamos="",$fecha_inicio="", $fecha_fin="", $estado="", $prestamocol="", $fk_libro="", $fk_usuario="") {
+        $this->isbn = $isbn;
+        $this->prestamos = $prestamos;
+        $this->fecha_inicio = $fecha_inicio;
+        $this->fecha_fin = $fecha_fin;
+        $this->estado = $estado;
+        $this->prestamocol = $prestamocol;
+        $this->fk_libro = $fk_libro;
+        $this->fk_usuario = $fk_usuario;
+        
+    }
+
+
+
+    
+
+
+    /**
+     * Get the value of isbn
+     */ 
+    public function getIsbn()
+    {
+        return $this->isbn;
+    }
+
+    /**
+     * Set the value of isbn
+     *
+     * @return  self
+     */ 
+    public function setIsbn($isbn)
+    {
+        $this->isbn = $isbn;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of prestamos
+     */ 
+    public function getPrestamos()
+    {
+        return $this->prestamos;
+    }
+
+    /**
+     * Set the value of prestamos
+     *
+     * @return  self
+     */ 
+    public function setPrestamos($prestamos)
+    {
+        $this->prestamos = $prestamos;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of fecha_inicio
+     */ 
+    public function getFecha_inicio()
+    {
+        return $this->fecha_inicio;
+    }
+
+    /**
+     * Set the value of fecha_inicio
+     *
+     * @return  self
+     */ 
+    public function setFecha_inicio($fecha_inicio)
+    {
+        $this->fecha_inicio = $fecha_inicio;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of fecha_fin
+     */ 
+    public function getFecha_fin()
+    {
+        return $this->fecha_fin;
+    }
+
+    /**
+     * Set the value of fecha_fin
+     *
+     * @return  self
+     */ 
+    public function setFecha_fin($fecha_fin)
+    {
+        $this->fecha_fin = $fecha_fin;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of estado
+     */ 
+    public function getEstado()
+    {
+        return $this->estado;
+    }
+
+    /**
+     * Set the value of estado
+     *
+     * @return  self
+     */ 
+    public function setEstado($estado)
+    {
+        $this->estado = $estado;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of prestamocol
+     */ 
+    public function getPrestamocol()
+    {
+        return $this->prestamocol;
+    }
+
+    /**
+     * Set the value of prestamocol
+     *
+     * @return  self
+     */ 
+    public function setPrestamocol($prestamocol)
+    {
+        $this->prestamocol = $prestamocol;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of fk_libro
+     */ 
+    public function getFk_libro()
+    {
+        return $this->fk_libro;
+    }
+
+    /**
+     * Set the value of fk_libro
+     *
+     * @return  self
+     */ 
+    public function setFk_libro($fk_libro)
+    {
+        $this->fk_libro = $fk_libro;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of fk_usuario
+     */ 
+    public function getFk_usuario()
+    {
+        return $this->fk_usuario;
+    }
+
+    /**
+     * Set the value of fk_usuario
+     *
+     * @return  self
+     */ 
+    public function setFk_usuario($fk_usuario)
+    {
+        $this->fk_usuario = $fk_usuario;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of idPrestamo
+     */ 
+    public function getIdPrestamo()
+    {
+        return $this->idPrestamo;
+    }
+
+    /**
+     * Set the value of idPrestamo
+     *
+     * @return  self
+     */ 
+    public function setIdPrestamo($idPrestamo)
+    {
+        $this->idPrestamo = $idPrestamo;
+
+        return $this;
+    }
+}
+?>
