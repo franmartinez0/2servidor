@@ -1,5 +1,5 @@
 <?php
- class Pelicula {
+ class Libro {
 
     private $idLibro;
     private $isbn;

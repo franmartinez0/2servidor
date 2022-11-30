@@ -4,11 +4,9 @@
 class prestamos{
     private $idPrestamo;
     private $isbn;
-    private $prestamos;
     private $fecha_inicio;
     private $fecha_fin;
     private $estado;
-    private $prestamocol;
     private $fk_libro;
     private $fk_usuario;
 
@@ -16,13 +14,11 @@ class prestamos{
     
     
     
-    public function __construct($isbn="",$prestamos="",$fecha_inicio="", $fecha_fin="", $estado="", $prestamocol="", $fk_libro="", $fk_usuario="") {
+    public function __construct($isbn="",$fecha_inicio="", $fecha_fin="", $estado="", $fk_libro="", $fk_usuario="") {
         $this->isbn = $isbn;
-        $this->prestamos = $prestamos;
         $this->fecha_inicio = $fecha_inicio;
         $this->fecha_fin = $fecha_fin;
         $this->estado = $estado;
-        $this->prestamocol = $prestamocol;
         $this->fk_libro = $fk_libro;
         $this->fk_usuario = $fk_usuario;
         
@@ -53,25 +49,7 @@ class prestamos{
         return $this;
     }
 
-    /**
-     * Get the value of prestamos
-     */ 
-    public function getPrestamos()
-    {
-        return $this->prestamos;
-    }
-
-    /**
-     * Set the value of prestamos
-     *
-     * @return  self
-     */ 
-    public function setPrestamos($prestamos)
-    {
-        $this->prestamos = $prestamos;
-
-        return $this;
-    }
+   
 
     /**
      * Get the value of fecha_inicio
@@ -133,25 +111,7 @@ class prestamos{
         return $this;
     }
 
-    /**
-     * Get the value of prestamocol
-     */ 
-    public function getPrestamocol()
-    {
-        return $this->prestamocol;
-    }
-
-    /**
-     * Set the value of prestamocol
-     *
-     * @return  self
-     */ 
-    public function setPrestamocol($prestamocol)
-    {
-        $this->prestamocol = $prestamocol;
-
-        return $this;
-    }
+   
 
     /**
      * Get the value of fk_libro
