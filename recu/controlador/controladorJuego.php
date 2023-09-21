@@ -15,7 +15,7 @@
             //Llamar al modelo para insertar esto
             ValoracionBD::apuntarValoracion($id, $valor);
             $nota = ValoracionBD::getValoracion($id);
-            VistaJuegos::mostrarSerieAPI($id, $nota);
+            VistaJuegos                                      ::mostrarSerieAPI($id, $nota);
         }
 
     }

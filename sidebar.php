@@ -106,7 +106,7 @@
 					</button>
 					<div class="collapse" id="dashboard-collapse">
 					<ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-						<li><a href="#" class="link-dark rounded">Ejercicio 1</a></li>
+						<li><a href="#" class="link-dark rounded">ejercicio 1</a></li>
 					</ul>
 					</div>
 				</li>
